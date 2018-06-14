@@ -1,0 +1,461 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Relay_SolidState:MOC3063M U1
+U 1 1 5B22A67B
+P 6900 4350
+F 0 "U1" H 6900 4675 50  0000 C CNN
+F 1 "MOC3063M" H 6900 4584 50  0000 C CNN
+F 2 "" H 6700 4150 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/MO/MOC3061M.pdf" H 6865 4350 50  0001 L CNN
+	1    6900 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5B22ABE0
+P 5850 2450
+F 0 "R4" V 5643 2450 50  0000 C CNN
+F 1 "1k" V 5734 2450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5780 2450 50  0001 C CNN
+F 3 "~" H 5850 2450 50  0001 C CNN
+	1    5850 2450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D3
+U 1 1 5B22ACA8
+P 6200 2450
+F 0 "D3" H 6191 2666 50  0000 C CNN
+F 1 "LED" H 6191 2575 50  0000 C CNN
+F 2 "" H 6200 2450 50  0001 C CNN
+F 3 "~" H 6200 2450 50  0001 C CNN
+	1    6200 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 2450 6000 2450
+$Comp
+L power:+5V #PWR03
+U 1 1 5B22AE24
+P 6450 2250
+F 0 "#PWR03" H 6450 2100 50  0001 C CNN
+F 1 "+5V" H 6465 2423 50  0000 C CNN
+F 2 "" H 6450 2250 50  0001 C CNN
+F 3 "" H 6450 2250 50  0001 C CNN
+	1    6450 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 2250 6450 2450
+Wire Wire Line
+	6450 2450 6350 2450
+$Comp
+L Device:D_Zener D2
+U 1 1 5B22AFEC
+P 5950 2700
+F 0 "D2" H 5950 2576 50  0000 C CNN
+F 1 "BZG05C9V1" H 5950 2485 50  0000 C CNN
+F 2 "" H 5950 2700 50  0001 C CNN
+F 3 "~" H 5950 2700 50  0001 C CNN
+	1    5950 2700
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 2700 6450 2700
+Wire Wire Line
+	6450 2700 6450 2450
+Connection ~ 6450 2450
+$Comp
+L Device:Q_NMOS_GSD Q1
+U 1 1 5B22B712
+P 5550 3600
+F 0 "Q1" H 5755 3646 50  0000 L CNN
+F 1 "IRLML2402" H 5755 3555 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:TSOT-23" H 5750 3700 50  0001 C CNN
+F 3 "~" H 5550 3600 50  0001 C CNN
+	1    5550 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_NMOS_GSD Q2
+U 1 1 5B22B7EC
+P 5550 4850
+F 0 "Q2" H 5755 4896 50  0000 L CNN
+F 1 "IRLML2402" H 5755 4805 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:TSOT-23" H 5750 4950 50  0001 C CNN
+F 3 "~" H 5550 4850 50  0001 C CNN
+	1    5550 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 4650 5650 4450
+Wire Wire Line
+	5650 4450 6600 4450
+$Comp
+L Device:R R5
+U 1 1 5B22B9F3
+P 6450 3550
+F 0 "R5" H 6520 3596 50  0000 L CNN
+F 1 "510" H 6520 3505 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6380 3550 50  0001 C CNN
+F 3 "~" H 6450 3550 50  0001 C CNN
+	1    6450 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 3400 6450 2700
+Connection ~ 6450 2700
+Wire Wire Line
+	6450 4250 6600 4250
+$Comp
+L Diode:BAV99 D1
+U 1 1 5B22BD02
+P 5050 4050
+F 0 "D1" V 5096 4127 50  0000 L CNN
+F 1 "BAV99" V 5005 4127 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5050 3900 50  0001 C CNN
+F 3 "www.nxp.com/documents/data_sheet/BAV99_SER.pdf" H 5050 4150 50  0001 C CNN
+	1    5050 4050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Diode:BAV99 D1
+U 2 1 5B22BDC7
+P 5050 4450
+F 0 "D1" V 5004 4528 50  0000 L CNN
+F 1 "BAV99" V 5095 4528 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5050 4300 50  0001 C CNN
+F 3 "www.nxp.com/documents/data_sheet/BAV99_SER.pdf" H 5050 4550 50  0001 C CNN
+	2    5050 4450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5050 4300 5050 4250
+Wire Wire Line
+	5050 3900 5050 3600
+Wire Wire Line
+	5050 3600 5250 3600
+Wire Wire Line
+	5050 4600 5050 4850
+Wire Wire Line
+	5050 4850 5250 4850
+$Comp
+L Device:R R2
+U 1 1 5B22CE70
+P 4800 3600
+F 0 "R2" V 4593 3600 50  0000 C CNN
+F 1 "100k" V 4684 3600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4730 3600 50  0001 C CNN
+F 3 "~" H 4800 3600 50  0001 C CNN
+	1    4800 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5B22CF19
+P 4800 4850
+F 0 "R3" V 4593 4850 50  0000 C CNN
+F 1 "100k" V 4684 4850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4730 4850 50  0001 C CNN
+F 3 "~" H 4800 4850 50  0001 C CNN
+	1    4800 4850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5B22CF77
+P 4250 4250
+F 0 "R1" V 4043 4250 50  0000 C CNN
+F 1 "1k" V 4134 4250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4180 4250 50  0001 C CNN
+F 3 "~" H 4250 4250 50  0001 C CNN
+	1    4250 4250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4650 3600 4500 3600
+Wire Wire Line
+	4500 3600 4500 4250
+Wire Wire Line
+	4500 4850 4650 4850
+Wire Wire Line
+	4400 4250 4500 4250
+Connection ~ 4500 4250
+Wire Wire Line
+	4500 4250 4500 4850
+Wire Wire Line
+	5050 4250 4500 4250
+Connection ~ 5050 4250
+Wire Wire Line
+	5050 4250 5050 4200
+Wire Wire Line
+	4950 3600 5050 3600
+Connection ~ 5050 3600
+Wire Wire Line
+	4950 4850 5050 4850
+Connection ~ 5050 4850
+$Comp
+L power:GND #PWR01
+U 1 1 5B22E124
+P 5650 4150
+F 0 "#PWR01" H 5650 3900 50  0001 C CNN
+F 1 "GND" H 5655 3977 50  0000 C CNN
+F 2 "" H 5650 4150 50  0001 C CNN
+F 3 "" H 5650 4150 50  0001 C CNN
+	1    5650 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 4150 5650 4100
+$Comp
+L power:GND #PWR02
+U 1 1 5B22E5F9
+P 5650 5400
+F 0 "#PWR02" H 5650 5150 50  0001 C CNN
+F 1 "GND" H 5655 5227 50  0000 C CNN
+F 2 "" H 5650 5400 50  0001 C CNN
+F 3 "" H 5650 5400 50  0001 C CNN
+	1    5650 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 5050 5650 5350
+Wire Wire Line
+	5250 4950 5250 4850
+Connection ~ 5250 4850
+Wire Wire Line
+	5250 4850 5350 4850
+Wire Wire Line
+	5250 3700 5250 3600
+Connection ~ 5250 3600
+Wire Wire Line
+	5250 3600 5350 3600
+Wire Wire Line
+	5250 4000 5250 4100
+Wire Wire Line
+	5250 4100 5650 4100
+Connection ~ 5650 4100
+Wire Wire Line
+	5650 4100 5650 3800
+Wire Wire Line
+	5250 5250 5250 5350
+Wire Wire Line
+	5250 5350 5650 5350
+Connection ~ 5650 5350
+Wire Wire Line
+	5650 5350 5650 5400
+Wire Wire Line
+	5650 2450 5650 2700
+Connection ~ 5650 2700
+Wire Wire Line
+	5650 2700 5650 3300
+Wire Wire Line
+	5650 2450 5700 2450
+Wire Wire Line
+	5650 2700 5800 2700
+Wire Wire Line
+	6450 3700 6450 4250
+$Comp
+L Device:R R6
+U 1 1 5B23957D
+P 7500 4250
+F 0 "R6" V 7293 4250 50  0000 C CNN
+F 1 "360" V 7384 4250 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 7430 4250 50  0001 C CNN
+F 3 "~" H 7500 4250 50  0001 C CNN
+	1    7500 4250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7350 4250 7200 4250
+$Comp
+L Device:R R7
+U 1 1 5B239CFF
+P 7500 4450
+F 0 "R7" V 7615 4450 50  0000 C CNN
+F 1 "360" V 7706 4450 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 7430 4450 50  0001 C CNN
+F 3 "~" H 7500 4450 50  0001 C CNN
+	1    7500 4450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7350 4450 7300 4450
+$Comp
+L Device:C C1
+U 1 1 5B23A7D4
+P 5250 3850
+F 0 "C1" H 5365 3896 50  0000 L CNN
+F 1 "1u" H 5365 3805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 5288 3700 50  0001 C CNN
+F 3 "~" H 5250 3850 50  0001 C CNN
+	1    5250 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5B23A8E2
+P 5250 5100
+F 0 "C2" H 5365 5146 50  0000 L CNN
+F 1 "1u" H 5365 5055 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 5288 4950 50  0001 C CNN
+F 3 "~" H 5250 5100 50  0001 C CNN
+	1    5250 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Triac_Thyristor:BT139-600 Q3
+U 1 1 5B23AB3B
+P 8050 4250
+F 0 "Q3" H 8179 4296 50  0000 L CNN
+F 1 "BT139-600" H 8179 4205 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown" H 8250 4175 50  0001 L CIN
+F 3 "https://www.rapidonline.com/pdf/47-3240.pdf" H 8050 4250 50  0001 L CNN
+	1    8050 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 4250 7750 4250
+Wire Wire Line
+	7750 4250 7750 3950
+Wire Wire Line
+	7750 3950 7850 3950
+Wire Wire Line
+	8050 3950 8050 4100
+Wire Wire Line
+	7650 4450 7750 4450
+Wire Wire Line
+	7750 4450 7750 4650
+Wire Wire Line
+	7750 4650 8050 4650
+Wire Wire Line
+	8050 4650 8050 4400
+Wire Wire Line
+	7900 4350 7300 4350
+Wire Wire Line
+	7300 4350 7300 4450
+Connection ~ 7300 4450
+Wire Wire Line
+	7300 4450 7200 4450
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 5B23E3AC
+P 9250 4250
+F 0 "J2" H 9330 4242 50  0000 L CNN
+F 1 "Conn_01x02" H 9330 4151 50  0000 L CNN
+F 2 "w_conn_screw:mors_2p" H 9250 4250 50  0001 C CNN
+F 3 "~" H 9250 4250 50  0001 C CNN
+	1    9250 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 4250 8900 4250
+Wire Wire Line
+	8900 4250 8900 3950
+Wire Wire Line
+	8900 3950 8050 3950
+Connection ~ 8050 3950
+Wire Wire Line
+	9050 4350 8900 4350
+Wire Wire Line
+	8900 4350 8900 4650
+Wire Wire Line
+	8900 4650 8750 4650
+Connection ~ 8050 4650
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 5B23FE1D
+P 3600 4250
+F 0 "J1" H 3520 4467 50  0000 C CNN
+F 1 "Conn_01x02" H 3520 4376 50  0000 C CNN
+F 2 "" H 3600 4250 50  0001 C CNN
+F 3 "~" H 3600 4250 50  0001 C CNN
+	1    3600 4250
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 4250 4100 4250
+$Comp
+L power:GND #PWR0101
+U 1 1 5B240C75
+P 4000 4450
+F 0 "#PWR0101" H 4000 4200 50  0001 C CNN
+F 1 "GND" H 4005 4277 50  0000 C CNN
+F 2 "" H 4000 4450 50  0001 C CNN
+F 3 "" H 4000 4450 50  0001 C CNN
+	1    4000 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 4450 4000 4350
+Wire Wire Line
+	4000 4350 3800 4350
+$Comp
+L Relay:FINDER-40.52 K1
+U 1 1 5B24271C
+P 7450 2850
+F 0 "K1" H 8080 2896 50  0000 L CNN
+F 1 "FINDER-40.52" H 8080 2805 50  0000 L CNN
+F 2 "Relay_THT:Relay_DPDT_Finder_40.52" H 8800 2820 50  0001 C CNN
+F 3 "http://gfinder.findernet.com/assets/Series/353/S40EN.pdf" H 7250 2850 50  0001 C CNN
+	1    7450 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 2550 7750 2350
+Wire Wire Line
+	7750 2350 7350 2350
+Wire Wire Line
+	7350 2350 7350 2550
+Wire Wire Line
+	7450 3150 7450 3300
+Wire Wire Line
+	7450 3300 7850 3300
+Wire Wire Line
+	7850 3300 7850 3150
+Wire Wire Line
+	7550 2550 7550 2150
+Wire Wire Line
+	7550 2150 7950 2150
+Wire Wire Line
+	7950 2150 7950 2550
+Wire Wire Line
+	7050 2550 7050 2450
+Wire Wire Line
+	7050 2450 6450 2450
+Wire Wire Line
+	7050 3150 7050 3300
+Wire Wire Line
+	7050 3300 5650 3300
+Connection ~ 5650 3300
+Wire Wire Line
+	5650 3300 5650 3400
+Wire Wire Line
+	7850 3300 7850 3950
+Connection ~ 7850 3300
+Connection ~ 7850 3950
+Wire Wire Line
+	7850 3950 8050 3950
+Wire Wire Line
+	7950 2150 8750 2150
+Wire Wire Line
+	8750 2150 8750 4650
+Connection ~ 7950 2150
+Connection ~ 8750 4650
+Wire Wire Line
+	8750 4650 8050 4650
+$EndSCHEMATC
