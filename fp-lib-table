@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name comutator)(type KiCad)(uri ${KIPRJMOD}/comutator.pretty)(options "")(descr ""))
+)

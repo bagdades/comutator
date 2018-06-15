@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:Comutator-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -19,7 +20,7 @@ U 1 1 5B22A67B
 P 6900 4350
 F 0 "U1" H 6900 4675 50  0000 C CNN
 F 1 "MOC3063M" H 6900 4584 50  0000 C CNN
-F 2 "" H 6700 4150 50  0001 L CIN
+F 2 "comutator:SO-6" H 6700 4150 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/MO/MOC3061M.pdf" H 6865 4350 50  0001 L CNN
 	1    6900 4350
 	1    0    0    -1  
@@ -376,17 +377,6 @@ Wire Wire Line
 Wire Wire Line
 	8900 4650 8750 4650
 Connection ~ 8050 4650
-$Comp
-L Connector_Generic:Conn_01x02 J1
-U 1 1 5B23FE1D
-P 3600 4250
-F 0 "J1" H 3520 4467 50  0000 C CNN
-F 1 "Conn_01x02" H 3520 4376 50  0000 C CNN
-F 2 "" H 3600 4250 50  0001 C CNN
-F 3 "~" H 3600 4250 50  0001 C CNN
-	1    3600 4250
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	3800 4250 4100 4250
 $Comp
@@ -458,4 +448,30 @@ Connection ~ 7950 2150
 Connection ~ 8750 4650
 Wire Wire Line
 	8750 4650 8050 4650
+$Comp
+L Connector_Generic:Conn_01x03 J1
+U 1 1 5B253C52
+P 3600 4250
+F 0 "J1" H 3520 4567 50  0000 C CNN
+F 1 "Conn_01x03" H 3520 4476 50  0000 C CNN
+F 2 "" H 3600 4250 50  0001 C CNN
+F 3 "~" H 3600 4250 50  0001 C CNN
+	1    3600 4250
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR04
+U 1 1 5B253CE5
+P 4000 4000
+F 0 "#PWR04" H 4000 3850 50  0001 C CNN
+F 1 "+5V" H 4015 4173 50  0000 C CNN
+F 2 "" H 4000 4000 50  0001 C CNN
+F 3 "" H 4000 4000 50  0001 C CNN
+	1    4000 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 4000 4000 4150
+Wire Wire Line
+	4000 4150 3800 4150
 $EndSCHEMATC
